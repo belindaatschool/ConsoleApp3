@@ -14,15 +14,13 @@ namespace ConsoleApp3
             Point p2 = MakeAPoint();
             Point p3 = MakeAPoint();
             Point p4 = MakeAPoint();
-            Point p5 = MakeAPoint();
-            Point p6 = MakeAPoint();
 
             Console.WriteLine(p1);
             Console.WriteLine(p2);
             Console.WriteLine(p3);
             Console.WriteLine(p4);
-            Console.WriteLine(p5);
-            Console.WriteLine(p6);
+
+            Console.ReadKey();
         }
         public static Point MakeAPoint()
         {

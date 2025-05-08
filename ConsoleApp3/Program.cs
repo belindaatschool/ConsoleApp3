@@ -10,15 +10,33 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
+            double dist1_2, dist1_3, dist1_4;
+            Point[] points;
+
             Point p1 = MakeAPoint();
             Point p2 = MakeAPoint();
             Point p3 = MakeAPoint();
             Point p4 = MakeAPoint();
 
-            Console.WriteLine(p1);
-            Console.WriteLine(p2);
-            Console.WriteLine(p3);
-            Console.WriteLine(p4);
+            dist1_2 = Distance(p1, p2);
+            dist1_3 = Distance(p1, p3);
+            dist1_4 = Distance(p1, p4);
+
+            Console.WriteLine(p1 + " " + p2 + " " + p3 + " " + p4);
+
+            Console.WriteLine("1-->2 " + dist1_2);
+            Console.WriteLine("1-->3 " + dist1_3);
+            Console.WriteLine("1-->4 " + dist1_4);
+            ;
+
+            if (dist1_2 > dist1_3 && dist1_2 > dist1_4)
+                Console.WriteLine("p2");
+
+            if (dist1_3 > dist1_2 && dist1_3 > dist1_4)
+                Console.WriteLine("p3");
+
+            if (dist1_4 > dist1_3 && dist1_4 > dist1_2)
+                Console.WriteLine("p4");
 
             Console.ReadKey();
         }
@@ -45,7 +63,7 @@ namespace ConsoleApp3
             y2 = p2.GetY();
 
             double distance = Math.Sqrt(
-                    Math.Pow(x1 - x2, 2) 
+                    Math.Pow(x1 - x2, 2)
                     +
                     Math.Pow(y1 - y2, 2)
                 );
